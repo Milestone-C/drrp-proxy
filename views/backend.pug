@@ -1,0 +1,13 @@
+html
+	head
+		title DRRP
+		script(src='/script.js')
+	body
+		h3 You're all set!
+		p Your backend service with UUID #{uuid} is connected and ready to go.
+		p Visit any URL on this domain to proxy your request to your service.
+		p Try visiting the 
+			a(href='/') home page
+		p
+			button#clear-uuid Click here
+			span to stop proxying requests.

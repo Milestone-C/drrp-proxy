@@ -1,0 +1,15 @@
+html
+	head
+		title DRRP Error
+		script(src='/script.js')
+	body
+		h3 DRRP ran into an error
+		if url_uuid
+			p Backend service with UUID #{url_uuid} is no longer connected.
+			if cookie_uuid
+				p You are still configured to proxy requests to #{cookie_uuid}
+				button#clear-uuid Click here to stop proxying requests.
+		else if cookie_uuid
+			p Backend service with UUID #{cookie_uuid} is no longer connected.
+		else
+			p Please specify a valid UUID in the URL.
